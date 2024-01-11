@@ -1,0 +1,10 @@
+DELIMITER $$
+CREATE PROCEDURE Musteriler()
+BEGIN
+    SELECT 
+        musteri_Tc       as ID,
+        musteri_İsmi     as İsmi,
+    
+    FROM EKEN_Sefer;
+END $$
+DELIMITER ;
