@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE ŞoförSefer(
+    id  varchar(64)  
+)
+BEGIN
+    SELECT * FROM EKEN_Şoför
+    WHERE Şoför_Tc = id;
+END $$
+DELIMITER ;

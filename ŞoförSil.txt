@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE ŞoförSil (
+    id    varchar(64)  
+)
+BEGIN
+    DELETE FROM EKEN_Şoför
+    WHERE Şoför_Tc = id;
+END $$
+DELIMITER ;

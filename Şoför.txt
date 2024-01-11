@@ -1,0 +1,12 @@
+DELIMITER $$
+CREATE PROCEDURE Musteriler()
+BEGIN
+    SELECT 
+        Şoför_Tc             as ID,
+        Şoför_İsmi           as İsmi,
+        Şoför_Telefon        as Tel,
+        Şoför_Cinsiyet       as Cinsiyet,
+
+    FROM Müşteri;
+END $$
+DELIMITER ;

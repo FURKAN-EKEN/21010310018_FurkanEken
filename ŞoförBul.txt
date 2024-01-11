@@ -1,0 +1,14 @@
+DELIMITER $$
+CREATE PROCEDURE ŞoförBul (
+    filtre      varchar(32)
+)
+BEGIN
+    SELECT * FROM EKEN_Şoför
+    WHERE 
+        Şoför_Tc             LIKE  CONCAT('%',filtre,'%') OR
+        Şoför_İsmi           LIKE  CONCAT('%',filtre,'%') OR
+        Şoför_Telefon        LIKE  CONCAT('%',filtre,'%') OR
+        Şoför_Cinsiyet       LIKE  CONCAT('%',filtre,'%') ;
+       
+END $$
+DELIMITER ;

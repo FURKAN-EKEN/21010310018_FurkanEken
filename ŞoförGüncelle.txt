@@ -1,0 +1,18 @@
+DELIMITER $$
+CREATE PROCEDURE ŞoförGüncelle (
+    Tc                 varchar(11)  ,
+    isim               varchar(64) ,
+    telefon            varchar(64),
+    cinsiyet           varchar(64)
+    
+)
+BEGIN
+    UPDATE EKEN_Güzergah
+    SET 
+           Şoför_İsmi      =     isim  ,
+           Şoför_Telefon   =     telefon,
+           Şoför_Cinsiyet  =     cinsiyet
+    WHERE 
+        Şoför_Tc  = Tc;
+END $$
+DELIMITER ;

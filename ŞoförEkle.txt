@@ -1,0 +1,13 @@
+DELIMITER $$
+CREATE PROCEDURE ŞoförEkle (
+    Tc                 varchar(11),
+    isim               varchar(64), 
+    telefon            varchar(64),
+    cinsiyet           varchar(64)
+)
+BEGIN
+    INSERT INTO EKEN_Şoför
+
+    VALUES  (Tc,isim,telefon,cinsiyet);
+END $$
+DELIMITER ;
