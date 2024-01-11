@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE BiletSefer(
+    id          varchar(64)  
+)
+BEGIN
+    SELECT * FROM EKEN_Sefer
+    WHERE Bilet_Id = id;
+END $$
+DELIMITER ;

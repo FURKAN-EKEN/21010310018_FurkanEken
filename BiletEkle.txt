@@ -1,0 +1,14 @@
+DELIMITER $$
+CREATE PROCEDURE BiletEkle (
+    id              varchar(64),
+    musteritc       varchar(64),
+    koltuk          float,
+    tarih           datetime,
+    saat            varchar(250)        
+)
+BEGIN
+    INSERT INTO EKEN_Bilet
+
+    VALUES  (id, musteritc,koltuk,tarih,saat);
+END $$
+DELIMITER ;

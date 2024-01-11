@@ -1,0 +1,14 @@
+DELIMITER $$
+CREATE PROCEDURE BiletBul (
+    filtre      varchar(32)
+)
+BEGIN
+    SELECT * FROM EKEN_Bilet
+    WHERE 
+        Bilet_Id       LIKE  CONCAT('%',filtre,'%') OR
+        Koltuk_No       LIKE  CONCAT('%',filtre,'%') OR
+        Bilet_Tarihi LIKE  CONCAT('%',filtre,'%') OR
+        Bilet_Saati    LIKE  CONCAT('%',filtre,'%') OR
+        Müşteri_Tc    LIKE  CONCAT('%',filtre,'%') ;
+END $$
+DELIMITER ;

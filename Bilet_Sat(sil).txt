@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE BiletSat (
+    id    varchar(64)  
+)
+BEGIN
+    DELETE FROM EKEN_Bilet
+    WHERE Bilet_Id = id;
+END $$
+DELIMITER ;

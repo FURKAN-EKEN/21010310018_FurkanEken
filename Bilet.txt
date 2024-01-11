@@ -1,0 +1,12 @@
+DELIMITER $$
+CREATE PROCEDURE Bilet()
+BEGIN
+    SELECT 
+        Bilet_Id       as ID,
+        Koltuk_No     as Koltuk,
+        Bilet_Tarihi  as Tarih,
+        Bilet_Saati   as Saat,
+        Müşteri_Tc    as Tc,
+    FROM Bilet;
+END $$
+DELIMITER ;
