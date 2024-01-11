@@ -1,0 +1,15 @@
+DELIMITER $$
+CREATE PROCEDURE SeferBul (
+    filtre      varchar(32)
+)
+BEGIN
+    SELECT * FROM EKEN_Sefer
+    WHERE 
+      Sefer_Id            LIKE  CONCAT('%',filtre,'%') OR
+      Aracın_Plakası      LIKE  CONCAT('%',filtre,'%') OR
+      Şoför_Tc            LIKE  CONCAT('%',filtre,'%') OR
+      Güzergah_Id         LIKE  CONCAT('%',filtre,'%') OR
+      Bilet_Id            LIKE  CONCAT('%',filtre,'%')  ;
+
+END $$
+DELIMITER ;
