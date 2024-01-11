@@ -1,0 +1,10 @@
+DELIMITER $$
+CREATE PROCEDURE Musteriler()
+BEGIN
+    SELECT 
+        Sefer_Id       as ID,
+       
+    
+    FROM Müşteri;
+END $$
+DELIMITER ;

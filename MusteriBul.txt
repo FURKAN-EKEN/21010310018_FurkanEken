@@ -1,0 +1,11 @@
+DELIMITER $$
+CREATE PROCEDURE MusteriBul (
+    filtre  varchar(32) 
+)
+BEGIN
+    SELECT * FROM EKEN_musteri
+    WHERE 
+        musteri_Tc      LIKE  CONCAT('%',filtre,'%') OR
+        musteri_İsmi      LIKE  CONCAT('%',filtre,'%');
+END $$
+DELIMITER ;

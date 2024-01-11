@@ -1,0 +1,10 @@
+
+DELIMITER $$
+CREATE PROCEDURE MusteriSatis(
+    id          varchar(64)  
+)
+BEGIN
+    SELECT * FROM Bilet
+    WHERE musteri_Tc = ID;
+END $$
+DELIMITER ;

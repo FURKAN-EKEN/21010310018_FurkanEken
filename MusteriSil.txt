@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE MusteriSil (
+    id      varchar(64) 
+)
+BEGIN
+    DELETE FROM EKEN_musteri
+    WHERE   musteri_Tc  = id;
+END $$
+DELIMITER ;

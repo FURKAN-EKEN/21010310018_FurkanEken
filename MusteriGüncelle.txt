@@ -1,0 +1,15 @@
+
+DELIMITER $$
+CREATE PROCEDURE EKEN_MüşteriGuncelle (
+    id      varchar(64) ,
+    isim     varchar(64) ,
+  
+)
+BEGIN
+    UPDATE abc_musteriler
+    SET 
+        Müşteri_İsmi =isim,
+    WHERE 
+        Müşteri_Tc  = id;
+END $$
+DELIMITER ;

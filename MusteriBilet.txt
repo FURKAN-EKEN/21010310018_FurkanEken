@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE MusteriBileti(
+    id     varchar(64)  
+)
+BEGIN
+    SELECT * FROM EKEN_Bilet
+    WHERE Müşteri_Tc = id;
+END $$
+DELIMITER ;

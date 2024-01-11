@@ -1,0 +1,10 @@
+DELIMITER $$
+CREATE PROCEDURE MusteriEkle (
+    ıd        varchar(64) ,
+    ismi      varchar(64) ,
+)
+BEGIN
+    INSERT INTO Eken_musteri
+    VALUES  (ıd, ismi);
+END $$
+DELIMITER ;
