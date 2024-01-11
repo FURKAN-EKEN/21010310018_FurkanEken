@@ -1,0 +1,18 @@
+DELIMITER $$
+CREATE PROCEDURE GüzergahGuncelle (
+    id                      varchar(64)  ,
+    kalkısnoktası           varchar(64) ,
+    varısnoktası            varchar(64)
+       
+    
+)
+BEGIN
+    UPDATE EKEN_Güzergah
+    SET 
+           Kalkış_Noktası =      kalkısnoktası  ,
+           Varış_Noktası   =     varısnoktası
+  
+    WHERE 
+        Güzergah_Id       = id;
+END $$
+DELIMITER ;

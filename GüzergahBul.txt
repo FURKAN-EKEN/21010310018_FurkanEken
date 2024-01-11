@@ -1,0 +1,13 @@
+DELIMITER $$
+CREATE PROCEDURE GüzergahBul (
+    filtre      varchar(32)
+)
+BEGIN
+    SELECT * FROM EKEN_Güzergah
+    WHERE 
+        Güzergah_Id       LIKE  CONCAT('%',filtre,'%') OR
+        Kalkış_Noktası    LIKE  CONCAT('%',filtre,'%') OR
+        Varış_Noktası     LIKE  CONCAT('%',filtre,'%') ;
+       
+END $$
+DELIMITER ;

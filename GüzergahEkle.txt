@@ -1,0 +1,13 @@
+DELIMITER $$
+CREATE PROCEDURE GüzergahEkle (
+    id                    varchar(64),
+    kalkısnoktası         varchar(64),
+    varisnoktası          varcahr(64),
+          
+)
+BEGIN
+    INSERT INTO EKEN_Güzergah
+
+    VALUES  (id, kalkısnoktası,varısnoktsı);
+END $$
+DELIMITER ;
