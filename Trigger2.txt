@@ -1,0 +1,19 @@
+DELIMITER $$
+
+CREATE TRIGGER biletkontol
+BEFORE INSERT ON EKEN_bilet
+FOR EACH ROW
+BEGIN
+    DECLARE musteri_id INT;
+
+    SELECT COUNT(*) INTO musteri_id
+    FROM EKEN_musteri
+    WHERE musteri_id = NEW.musteri_id;
+
+    IF musteri_id = 0 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Biletin müşteri_id\'si mevcut müşteri_id\'lerinden biriyle uyuşmuyor.';
+    END IF;
+END $$
+
+DELIMITER ;

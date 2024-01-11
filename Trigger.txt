@@ -1,0 +1,19 @@
+DELIMITER $$
+
+CREATE TRIGGER biletsayısı
+BEFORE INSERT ON EKEN_Sefer
+FOR EACH ROW
+BEGIN
+    DECLARE bilet_count INT;
+
+    SELECT COUNT(*) INTO bilet_count
+    FROM EKEN_Bilet
+    WHERE sefer_id = NEW.sefer_id;
+
+    IF bilet_count != 40 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Bilet sayısı 40 değil, sefer başlatılamaz.';
+    END IF;
+END $$
+
+DELIMITER ;
