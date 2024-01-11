@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE SeferEkle (
+    ıd        varchar(64) 
+)
+BEGIN
+    INSERT INTO EKEN_Sefer
+    VALUES  (ıd);
+END $$
+DELIMITER ;
