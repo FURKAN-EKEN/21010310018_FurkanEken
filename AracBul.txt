@@ -1,0 +1,12 @@
+DELIMITER $$
+CREATE PROCEDURE AracBul (
+    filtre      varchar(32)
+)
+BEGIN
+    SELECT * FROM EKEN_Arac
+    WHERE 
+        Aracın_Plakası       LIKE  CONCAT('%',filtre,'%') OR
+        Aracın_Markası       LIKE  CONCAT('%',filtre,'%') ;
+       
+END $$
+DELIMITER ;

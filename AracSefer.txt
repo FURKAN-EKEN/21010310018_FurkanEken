@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE AracSefer(
+    id  varchar(64)  
+)
+BEGIN
+    SELECT * FROM EKEN_Araç
+    WHERE Aracın_Plakası = id;
+END $$
+DELIMITER ;

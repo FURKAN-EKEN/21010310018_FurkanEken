@@ -1,0 +1,9 @@
+DELIMITER $$
+CREATE PROCEDURE AracSil (
+    id    varchar(64)  
+)
+BEGIN
+    DELETE FROM EKEN_Arac
+    WHERE Aracın_Plakası = id;
+END $$
+DELIMITER ;

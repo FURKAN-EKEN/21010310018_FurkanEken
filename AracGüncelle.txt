@@ -1,0 +1,16 @@
+DELIMITER $$
+CREATE PROCEDURE AracGüncelle (
+
+    plaka           varchar(64)  ,
+    marka           varchar(64) 
+   
+)
+BEGIN
+    UPDATE EKEN_Güzergah
+    SET 
+           Aracın_Markası   =     marka
+  
+    WHERE 
+        Aracın_Plakası       = plaka;
+END $$
+DELIMITER ;

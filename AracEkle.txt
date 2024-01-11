@@ -1,0 +1,11 @@
+DELIMITER $$
+CREATE PROCEDURE AracEkle (
+    plaka              varchar(64),
+    marka              varchar(64), 
+)
+BEGIN
+    INSERT INTO EKEN_Arac
+
+    VALUES  (plaka,marka);
+END $$
+DELIMITER ;
